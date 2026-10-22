@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mcsn:block/creepy_mansion_kitchen_bricks"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "item.mcsn.withered_nether_star": "Estrella del Inframundo Marchita",
+  "item.mcsn.golden_gauntlet": "§6Guantelete de Oro§r",
+  "item.mcsn.laser_gun": "Pistola Láser",
+  "item.mcsn.diamond_detector": "Detector de Diamantes",
+  "item.mcsn.withered_flesh": "Carne Marchita",
+  "item.mcsn.calculator": "Calculador",
+
+  "block.mcsn.cloth": "Tela",
+  "block.mcsn.black_witherstorm_flesh_block": "Carne del Tormenta Wither de Negro",
+  "block.mcsn.dark_purple_witherstorm_flesh_block": "Carne del Tormenta Wither de Púrpura Oscuro",
+  "block.mcsn.purple_witherstorm_flesh_block": "Carne del Tormenta Wither de Púrpura",
+  "block.mcsn.asphalt_a": "Asfalto",
+  "block.mcsn.dark_diorite": "Diorita Oscura",
+  "block.mcsn.blue_diorite": "Diorita Azul",
+  "block.mcsn.creepy_mansion_kitchen_bricks": "Ladrillos de Cocina",
+  "block.mcsn.witherstorm_bricks": "Ladrillos Marchitos",
+  "block.mcsn.town_fair_building_a_cobblestone": "Adoquín de la Feria de la Ciudad",
+  "block.mcsn.withered_cobblestone_redstone_lines": "Adoquín Marchita",
+  "block.mcsn.gray_granite": "Granito Gris",
+  "block.mcsn.glowing_obsidian": "Obsidiana Brillante",
+  "block.mcsn.redstone_heart": "Corazón de Redstone",
+  "block.mcsn.dyable_planks": "Tablones Teñibles",
+  "block.mcsn.dyable_glowstone": "Piedra Luminosa Teñibles",
+  "block.mcsn.dyable_concrete": "Hormigón Teñible",
+  "block.mcsn.dyable_glass": "Vidrio Teñible",
+
+  "key.mcsn.laser_menu": "Menú de Colores del Láser",
+  "key.categories.mcsn": "Controles del Mod MCSN",
+
+  "creativetab.mcsn_items_tab": "Artículos MCSN",
+
+  "tooltip.mcsn.rgb_paintbrush.tooltip": "§7Puede teñir ciertos bloques con valores de RGB.§r"
+}

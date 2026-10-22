@@ -1,0 +1,772 @@
+{
+  "variants": {
+    "variant=0": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines0"
+    },
+    "variant=1": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines1"
+    },
+    "variant=2": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines2"
+    },
+    "variant=3": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines3"
+    },
+    "variant=4": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines4"
+    },
+    "variant=5": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines5"
+    },
+    "variant=6": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines6"
+    },
+    "variant=7": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines7"
+    },
+    "variant=8": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines8"
+    },
+    "variant=9": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines9"
+    },
+    "variant=10": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines10"
+    },
+    "variant=11": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines11"
+    },
+    "variant=12": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines12"
+    },
+    "variant=13": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines13"
+    },
+    "variant=14": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines14"
+    },
+    "variant=15": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines15"
+    },
+    "variant=16": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines16"
+    },
+    "variant=17": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines17"
+    },
+    "variant=18": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines18"
+    },
+    "variant=19": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines19"
+    },
+    "variant=20": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines20"
+    },
+    "variant=21": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines21"
+    },
+    "variant=22": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines22"
+    },
+    "variant=23": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines23"
+    },
+    "variant=24": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines24"
+    },
+    "variant=25": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines25"
+    },
+    "variant=26": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines26"
+    },
+    "variant=27": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines27"
+    },
+    "variant=28": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines28"
+    },
+    "variant=29": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines29"
+    },
+    "variant=30": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines30"
+    },
+    "variant=31": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines31"
+    },
+    "variant=32": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines32"
+    },
+    "variant=33": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines33"
+    },
+    "variant=34": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines34"
+    },
+    "variant=35": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines35"
+    },
+    "variant=36": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines36"
+    },
+    "variant=37": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines37"
+    },
+    "variant=38": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines38"
+    },
+    "variant=39": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines39"
+    },
+    "variant=40": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines40"
+    },
+    "variant=41": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines41"
+    },
+    "variant=42": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines42"
+    },
+    "variant=43": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines43"
+    },
+    "variant=44": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines44"
+    },
+    "variant=45": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines45"
+    },
+    "variant=46": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines46"
+    },
+    "variant=47": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines47"
+    },
+    "variant=48": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines48"
+    },
+    "variant=49": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines49"
+    },
+    "variant=50": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines50"
+    },
+    "variant=51": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines51"
+    },
+    "variant=52": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines52"
+    },
+    "variant=53": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines53"
+    },
+    "variant=54": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines54"
+    },
+    "variant=55": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines55"
+    },
+    "variant=56": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines56"
+    },
+    "variant=57": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines57"
+    },
+    "variant=58": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines58"
+    },
+    "variant=59": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines59"
+    },
+    "variant=60": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines60"
+    },
+    "variant=61": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines61"
+    },
+    "variant=62": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines62"
+    },
+    "variant=63": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines63"
+    },
+    "variant=64": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines64"
+    },
+    "variant=65": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines65"
+    },
+    "variant=66": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines66"
+    },
+    "variant=67": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines67"
+    },
+    "variant=68": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines68"
+    },
+    "variant=69": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines69"
+    },
+    "variant=70": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines70"
+    },
+    "variant=71": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines71"
+    },
+    "variant=72": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines72"
+    },
+    "variant=73": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines73"
+    },
+    "variant=74": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines74"
+    },
+    "variant=75": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines75"
+    },
+    "variant=76": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines76"
+    },
+    "variant=77": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines77"
+    },
+    "variant=78": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines78"
+    },
+    "variant=79": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines79"
+    },
+    "variant=80": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines80"
+    },
+    "variant=81": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines81"
+    },
+    "variant=82": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines82"
+    },
+    "variant=83": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines83"
+    },
+    "variant=84": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines84"
+    },
+    "variant=85": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines85"
+    },
+    "variant=86": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines86"
+    },
+    "variant=87": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines87"
+    },
+    "variant=88": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines88"
+    },
+    "variant=89": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines89"
+    },
+    "variant=90": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines90"
+    },
+    "variant=91": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines91"
+    },
+    "variant=92": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines92"
+    },
+    "variant=93": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines93"
+    },
+    "variant=94": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines94"
+    },
+    "variant=95": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines95"
+    },
+    "variant=96": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines96"
+    },
+    "variant=97": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines97"
+    },
+    "variant=98": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines98"
+    },
+    "variant=99": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines99"
+    },
+    "variant=100": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines100"
+    },
+    "variant=101": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines101"
+    },
+    "variant=102": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines102"
+    },
+    "variant=103": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines103"
+    },
+    "variant=104": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines104"
+    },
+    "variant=105": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines105"
+    },
+    "variant=106": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines106"
+    },
+    "variant=107": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines107"
+    },
+    "variant=108": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines108"
+    },
+    "variant=109": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines109"
+    },
+    "variant=110": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines110"
+    },
+    "variant=111": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines111"
+    },
+    "variant=112": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines112"
+    },
+    "variant=113": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines113"
+    },
+    "variant=114": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines114"
+    },
+    "variant=115": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines115"
+    },
+    "variant=116": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines116"
+    },
+    "variant=117": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines117"
+    },
+    "variant=118": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines118"
+    },
+    "variant=119": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines119"
+    },
+    "variant=120": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines120"
+    },
+    "variant=121": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines121"
+    },
+    "variant=122": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines122"
+    },
+    "variant=123": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines123"
+    },
+    "variant=124": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines124"
+    },
+    "variant=125": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines125"
+    },
+    "variant=126": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines126"
+    },
+    "variant=127": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines127"
+    },
+    "variant=128": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines128"
+    },
+    "variant=129": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines129"
+    },
+    "variant=130": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines130"
+    },
+    "variant=131": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines131"
+    },
+    "variant=132": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines132"
+    },
+    "variant=133": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines133"
+    },
+    "variant=134": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines134"
+    },
+    "variant=135": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines135"
+    },
+    "variant=136": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines136"
+    },
+    "variant=137": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines137"
+    },
+    "variant=138": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines138"
+    },
+    "variant=139": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines139"
+    },
+    "variant=140": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines140"
+    },
+    "variant=141": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines141"
+    },
+    "variant=142": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines142"
+    },
+    "variant=143": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines143"
+    },
+    "variant=144": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines144"
+    },
+    "variant=145": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines145"
+    },
+    "variant=146": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines146"
+    },
+    "variant=147": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines147"
+    },
+    "variant=148": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines148"
+    },
+    "variant=149": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines149"
+    },
+    "variant=150": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines150"
+    },
+    "variant=151": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines151"
+    },
+    "variant=152": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines152"
+    },
+    "variant=153": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines153"
+    },
+    "variant=154": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines154"
+    },
+    "variant=155": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines155"
+    },
+    "variant=156": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines156"
+    },
+    "variant=157": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines157"
+    },
+    "variant=158": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines158"
+    },
+    "variant=159": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines159"
+    },
+    "variant=160": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines160"
+    },
+    "variant=161": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines161"
+    },
+    "variant=162": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines162"
+    },
+    "variant=163": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines163"
+    },
+    "variant=164": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines164"
+    },
+    "variant=165": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines165"
+    },
+    "variant=166": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines166"
+    },
+    "variant=167": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines167"
+    },
+    "variant=168": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines168"
+    },
+    "variant=169": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines169"
+    },
+    "variant=170": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines170"
+    },
+    "variant=171": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines171"
+    },
+    "variant=172": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines172"
+    },
+    "variant=173": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines173"
+    },
+    "variant=174": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines174"
+    },
+    "variant=175": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines175"
+    },
+    "variant=176": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines176"
+    },
+    "variant=177": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines177"
+    },
+    "variant=178": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines178"
+    },
+    "variant=179": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines179"
+    },
+    "variant=180": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines180"
+    },
+    "variant=181": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines181"
+    },
+    "variant=182": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines182"
+    },
+    "variant=183": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines183"
+    },
+    "variant=184": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines184"
+    },
+    "variant=185": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines185"
+    },
+    "variant=186": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines186"
+    },
+    "variant=187": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines187"
+    },
+    "variant=188": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines188"
+    },
+    "variant=189": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines189"
+    },
+    "variant=190": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines190"
+    },
+    "variant=191": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines191"
+    },
+    "variant=192": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines192"
+    },
+    "variant=193": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines193"
+    },
+    "variant=194": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines194"
+    },
+    "variant=195": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines195"
+    },
+    "variant=196": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines196"
+    },
+    "variant=197": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines197"
+    },
+    "variant=198": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines198"
+    },
+    "variant=199": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines199"
+    },
+    "variant=200": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines200"
+    },
+    "variant=201": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines201"
+    },
+    "variant=202": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines202"
+    },
+    "variant=203": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines203"
+    },
+    "variant=204": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines204"
+    },
+    "variant=205": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines205"
+    },
+    "variant=206": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines206"
+    },
+    "variant=207": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines207"
+    },
+    "variant=208": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines208"
+    },
+    "variant=209": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines209"
+    },
+    "variant=210": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines210"
+    },
+    "variant=211": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines211"
+    },
+    "variant=212": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines212"
+    },
+    "variant=213": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines213"
+    },
+    "variant=214": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines214"
+    },
+    "variant=215": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines215"
+    },
+    "variant=216": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines216"
+    },
+    "variant=217": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines217"
+    },
+    "variant=218": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines218"
+    },
+    "variant=219": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines219"
+    },
+    "variant=220": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines220"
+    },
+    "variant=221": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines221"
+    },
+    "variant=222": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines222"
+    },
+    "variant=223": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines223"
+    },
+    "variant=224": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines224"
+    },
+    "variant=225": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines225"
+    },
+    "variant=226": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines226"
+    },
+    "variant=227": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines227"
+    },
+    "variant=228": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines228"
+    },
+    "variant=229": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines229"
+    },
+    "variant=230": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines230"
+    },
+    "variant=231": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines231"
+    },
+    "variant=232": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines232"
+    },
+    "variant=233": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines233"
+    },
+    "variant=234": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines234"
+    },
+    "variant=235": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines235"
+    },
+    "variant=236": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines236"
+    },
+    "variant=237": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines237"
+    },
+    "variant=238": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines238"
+    },
+    "variant=239": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines239"
+    },
+    "variant=240": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines240"
+    },
+    "variant=241": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines241"
+    },
+    "variant=242": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines242"
+    },
+    "variant=243": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines243"
+    },
+    "variant=244": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines244"
+    },
+    "variant=245": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines245"
+    },
+    "variant=246": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines246"
+    },
+    "variant=247": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines247"
+    },
+    "variant=248": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines248"
+    },
+    "variant=249": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines249"
+    },
+    "variant=250": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines250"
+    },
+    "variant=251": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines251"
+    },
+    "variant=252": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines252"
+    },
+    "variant=253": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines253"
+    },
+    "variant=254": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines254"
+    },
+    "variant=255": {
+      "model": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines255"
+    }
+  }
+}

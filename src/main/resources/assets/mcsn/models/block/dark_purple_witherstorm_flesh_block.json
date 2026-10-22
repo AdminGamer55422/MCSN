@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mcsn:block/dark_purple_witherstorm_flesh_block"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "variant=0": {
+      "model": "mcsn:block/skyland_cobblestone_dark"
+    },
+    "variant=1": {
+      "model": "mcsn:block/skyland_cobblestone_light"
+    }
+  }
+}

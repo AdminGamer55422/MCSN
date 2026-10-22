@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "mcsn:item/champion_gauntlet_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "mcsn:item/champion_gauntlet_2d"
+    },
+    "ground": {
+      "parent": "mcsn:item/champion_gauntlet_3d"
+    },
+    "fixed": {
+      "parent": "mcsn:item/champion_gauntlet_3d"
+    }
+  }
+}

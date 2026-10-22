@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mcsn:block/building_town_fair_night_a_cobblestone"
+  }
+}

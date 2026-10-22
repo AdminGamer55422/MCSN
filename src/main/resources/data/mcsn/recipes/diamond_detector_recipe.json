@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:compass"
+    },
+    "D": {
+      "tag": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "D",
+    "#"
+  ],
+  "result": {
+    "item": "mcsn:diamond_detector"
+  },
+  "show_notification": true
+}

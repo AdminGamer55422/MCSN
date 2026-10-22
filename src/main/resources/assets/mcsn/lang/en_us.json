@@ -1,0 +1,36 @@
+{
+  "item.mcsn.withered_nether_star": "Withered Nether Star",
+  "item.mcsn.golden_gauntlet": "§6Golden Gauntlet§r",
+  "item.mcsn.prismarine_gauntlet": "§3Prismarine Gauntlet§r",
+  "item.mcsn.champion_gauntlet": "§4Champion Gauntlet§r",
+  "item.mcsn.laser_gun": "Laser Gun",
+  "item.mcsn.diamond_detector": "Diamond Detector",
+  "item.mcsn.withered_flesh": "Withered Flesh",
+  "item.mcsn.calculator": "Calculator",
+
+  "block.mcsn.cloth": "Cloth",
+  "block.mcsn.black_witherstorm_flesh_block": "Black Wither Storm Flesh",
+  "block.mcsn.dark_purple_witherstorm_flesh_block": "Dark Purple Wither Storm Flesh",
+  "block.mcsn.purple_witherstorm_flesh_block": "Purple Wither Storm Flesh",
+  "block.mcsn.asphalt_a": "Asphalt",
+  "block.mcsn.dark_diorite": "Dark Diorite",
+  "block.mcsn.blue_diorite": "Blue Diorite",
+  "block.mcsn.creepy_mansion_kitchen_bricks": "Kitchen Bricks",
+  "block.mcsn.witherstorm_bricks": "Withered Bricks",
+  "block.mcsn.town_fair_building_a_cobblestone": "Town Fair Cobblestone",
+  "block.mcsn.withered_cobblestone_redstone_lines": "Withered Cobblestone",
+  "block.mcsn.gray_granite": "Gray Granite",
+  "block.mcsn.glowing_obsidian": "Glowing Obsidian",
+  "block.mcsn.redstone_heart": "Redstone Heart",
+  "block.mcsn.dyable_planks": "Dyeable Planks",
+  "block.mcsn.dyable_glowstone": "Dyeable Glowstone",
+  "block.mcsn.dyable_concrete": "Dyeable Concrete",
+  "block.mcsn.dyable_glass": "Dyeable Glass",
+
+  "key.mcsn.laser_menu": "Open Laser Color Menu",
+  "key.categories.mcsn": "MCSN Mod Controls",
+
+  "creativetab.mcsn_items_tab": "MCSN Items",
+
+  "tooltip.mcsn.rgb_paintbrush.tooltip": "§7Can dye certain blocks with RGB Values.§r"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mcsn:block/withered_cobblestone/withered_cobblestone_redstone_lines152"
+  }
+}

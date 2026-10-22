@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stone"
+    },
+    {
+      "item": "gray_dye"
+    }
+  ],
+  "result": {
+    "item":  "mcsn:asphalt_a",
+    "count": 1
+  }
+}

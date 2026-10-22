@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "mcsn:block/town_fair_door_d/town_fair_door_d_bottom",
+    "top": "mcsn:block/town_fair_door_d/town_fair_door_d_top"
+  }
+}
