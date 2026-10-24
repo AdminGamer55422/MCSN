@@ -1,21 +1,21 @@
 package net.admingamer.mcsn.util;
 
-import java.math.BigDecimal;
-
 public class MCSNMath {
+    private static final double LN_2 = 0.6931471805599453;
+
     public static double acosh(double x) {
         if (x < 1.0) {
             return Double.NaN;
         }
         if (x > 100000000.0) {
-            return Math.log(x) + Math.log(2.0);
+            return Math.log(x) + LN_2;
         }
         return Math.log(x + Math.sqrt(x * x - 1.0));
     }
 
     public static double asinh(double x) {
         if (Math.abs(x) > 100000000.0) {
-            return Math.signum(x) * (Math.log(Math.abs(x)) + Math.log(2.0));
+            return Math.signum(x) * (Math.log(Math.abs(x)) + LN_2);
         }
         return Math.log(x + Math.sqrt(x * x + 1.0));
     }
@@ -24,7 +24,7 @@ public class MCSNMath {
         if (Math.abs(x) >= 1.0) {
             return (x == 1.0) ? Double.POSITIVE_INFINITY : (x == -1.0) ? Double.NEGATIVE_INFINITY : Double.NaN;
         }
-        return 0.5 * Math.log1p(2.0 * x / (1.0 - x));
+        return 0.5 * (Math.log1p(x) - Math.log1p(-x));
     }
 
     public static double csc(double x) {
@@ -46,7 +46,9 @@ public class MCSNMath {
         if (Double.compare(x, 0.0) == 0) {
             return (Double.doubleToRawLongBits(x) < 0) ? Double.NEGATIVE_INFINITY : Double.POSITIVE_INFINITY;
         }
-        return Math.log(1.0 / x + Math.sqrt(1.0 / (x * x) + 1.0));
+        double absX = Math.abs(x);
+        double val = Math.log(1.0 / absX + Math.sqrt(1.0 / (x * x) + 1.0));
+        return Math.copySign(val, x);
     }
 
     public static double sec(double x) {
@@ -58,6 +60,9 @@ public class MCSNMath {
     }
 
     public static double asec(double x) {
+        if (x > -1.0 && x < 1.0) {
+            return Double.NaN;
+        }
         return Math.acos(1.0 / x);
     }
 

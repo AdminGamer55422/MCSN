@@ -74,16 +74,16 @@ public class CalculatorPacket {
                         ans = result;
                     }
                     case "|a|" -> ans = BigDecimal.valueOf(Math.abs(n1));
-                    case "⌈a⌉" -> ans = BigDecimal.valueOf(Math.ceil(n1));
+                    case "ceil" -> ans = BigDecimal.valueOf(Math.ceil(n1));
                     case "acos" -> ans = BigDecimal.valueOf(Math.acos(n1));
                     case "asin" -> ans = BigDecimal.valueOf(Math.asin(n1));
                     case "atan" -> ans = BigDecimal.valueOf(Math.atan(n1));
                     case "atan2" -> ans = BigDecimal.valueOf(Math.atan2(n1, n2));
-                    case "³√" -> ans = BigDecimal.valueOf(Math.cbrt(n1));
+                    case "∛" -> ans = BigDecimal.valueOf(Math.cbrt(n1));
                     case "sign" -> ans = BigDecimal.valueOf(Math.copySign(n1, n2));
                     case "exp" -> ans = BigDecimal.valueOf(Math.exp(n1));
                     case "expm1" -> ans = BigDecimal.valueOf(Math.expm1(n1));
-                    case "⌊a⌋" -> ans = BigDecimal.valueOf(Math.floor(n1));
+                    case "floor" -> ans = BigDecimal.valueOf(Math.floor(n1));
                     case "log" -> ans = BigDecimal.valueOf(Math.log(n1));
                     case "log_b" -> {
                         if (n1 <= 0 || n2 <= 0 || n2 == 1) {
@@ -102,7 +102,7 @@ public class CalculatorPacket {
                     case "round" -> ans = BigDecimal.valueOf(Math.round(n1));
                     case "scalb" -> ans = BigDecimal.valueOf(Math.scalb(n1, (int)n2));
                     case "√" -> ans = BigDecimal.valueOf(Math.sqrt(n1));
-                    case "a²" -> ans = BigDecimal.valueOf(Mth.square(n1));
+                    case "²" -> ans = BigDecimal.valueOf(Mth.square(n1));
                     case "deg" -> ans = BigDecimal.valueOf(Math.toDegrees(n1));
                     case "rad" -> ans = BigDecimal.valueOf(Math.toRadians(n1));
                     case "ulp" -> ans = BigDecimal.valueOf(Math.ulp(n1));
@@ -116,7 +116,7 @@ public class CalculatorPacket {
                         ans = currentMem.add(valueToAdd);
 
                         persistentData.putString("mcsn_calculator_memory", ans.toPlainString());
-                        player.sendSystemMessage(Component.literal("§b// Memory M+: Added " + valueToAdd.stripTrailingZeros().toPlainString() + " (Total: " + ans.stripTrailingZeros().toPlainString() + ")"));
+                        player.sendSystemMessage(Component.literal("§bMemory M+: Added " + valueToAdd.stripTrailingZeros().toPlainString() + " (Total: " + ans.stripTrailingZeros().toPlainString() + ")"));
                         context.setPacketHandled(true);
                         return;
                     }
@@ -192,11 +192,7 @@ public class CalculatorPacket {
 
                 String display = switch (op) {
                     case "|a|" -> "|" + s1 + "| = " + sAns;
-                    case "⌈a⌉" -> "⌈" + s1 + "⌉ = " + sAns;
-                    case "⌊a⌋" -> "⌊" + s1 + "⌋ = " + sAns;
-                    case "√" -> "√(" + s1 + ") = " + sAns;
-                    case "³√" -> "³√(" + s1 + ") = " + sAns;
-                    case "a²" -> s1 + "² = " + sAns;
+                    case "²" -> s1 + "² = " + sAns;
                     case "!" -> s1 + "! = " + sAns;
                     case "deg" -> s1 + "to degrees = " + sAns;
                     case "rad" -> s1 + "to radians = " + sAns;

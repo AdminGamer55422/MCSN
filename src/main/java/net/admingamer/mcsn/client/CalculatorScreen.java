@@ -18,7 +18,7 @@ public class CalculatorScreen extends AbstractContainerScreen<CalculatorMenu> {
     private EditBox inputN3;
     private MathScrollPanel mathPanel;
 
-    private final String[] javaMathOps = {"|a|", "⌈a⌉", "³√", "sign", "⌊a⌋", "exp", "expm1", "log", "log10", "log1p", "log_b", "mod", "asin", "acos", "atan", "atan2", "random", "round", "max", "min", "^", "!", "scalb", "√", "a²", "deg", "rad", "ulp"};
+    private final String[] javaMathOps = {"|a|", "ceil", "sign", "floor", "exp", "expm1", "log", "log10", "log1p", "log_b", "mod", "asin", "acos", "atan", "atan2", "random", "round", "max", "min", "^", "!", "scalb", "√", "∛", "²", "deg", "rad", "ulp"};
     private final String[] customMathOps = {"mth_sin", "mth_tan", "mth_cos", "mth_sinh", "mth_tanh", "mth_cosh", "mth_color", "mth_hsvToRgb", "mth_clamp", "mth_clampedLerp", "mth_wrap", "mth_lerp", "mth_inverseLerp", "mth_triangleWave", "mth_wobble", "mth_acosh", "mth_asinh", "mth_atanh", "mth_csc", "mth_csch", "mth_acsc", "mth_acsch", "mth_sec", "mth_sech", "mth_asec", "mth_asech", "mth_cot", "mth_coth", "mth_acot", "mth_acoth"};
 
     public CalculatorScreen(CalculatorMenu menu, Inventory playerInventory, Component title) {
@@ -58,23 +58,23 @@ public class CalculatorScreen extends AbstractContainerScreen<CalculatorMenu> {
                 default -> "Basic mathematical operator.";
             };
 
-            this.addRenderableWidget(Button.builder(Component.literal("[" + op + "]"), b -> sendCalc(op))
+            this.addRenderableWidget(Button.builder(Component.literal(op), b -> sendCalc(op))
                     .bounds(baseX + 15 + (i % 5 * 45), baseY + 55, 42, 20)
                     .tooltip(Tooltip.create(Component.literal(tooltipText)))
                     .build());
         }
 
-        this.addRenderableWidget(Button.builder(Component.literal("[MC]"), b -> sendCalc("m_clear"))
+        this.addRenderableWidget(Button.builder(Component.literal("MC"), b -> sendCalc("m_clear"))
                 .bounds(baseX + 15, baseY + 77, 42, 16) // Shorter 16px high sleek utility buttons
                 .tooltip(Tooltip.create(Component.literal("Memory Clear\n\nResets stored value to 0")))
                 .build());
 
-        this.addRenderableWidget(Button.builder(Component.literal("[MR]"), b -> sendCalc("m_recall"))
+        this.addRenderableWidget(Button.builder(Component.literal("MR"), b -> sendCalc("m_recall"))
                 .bounds(baseX + 60, baseY + 77, 42, 16)
                 .tooltip(Tooltip.create(Component.literal("Memory Recall\n\nPrints out your currently saved memory number")))
                 .build());
 
-        this.addRenderableWidget(Button.builder(Component.literal("[M+]"), b -> sendCalc("m_add"))
+        this.addRenderableWidget(Button.builder(Component.literal("M+"), b -> sendCalc("m_add"))
                 .bounds(baseX + 105, baseY + 77, 42, 16)
                 .tooltip(Tooltip.create(Component.literal("Memory Plus\n\nAdds current value to memory tracking slot")))
                 .build());
@@ -168,7 +168,7 @@ public class CalculatorScreen extends AbstractContainerScreen<CalculatorMenu> {
                 lastJavaMathY = Math.max(lastJavaMathY, btnY);
 
                 this.internalYOffsets.add(btnY);
-                this.buttons.add(Button.builder(Component.literal("[" + op + "]"), b -> sendCalc(op))
+                this.buttons.add(Button.builder(Component.literal(op), b -> sendCalc(op))
                         .bounds(this.left + btnX, this.top + btnY, 36, 20)
                         .tooltip(Tooltip.create(Component.literal(tooltipText)))
                         .build());
@@ -190,7 +190,7 @@ public class CalculatorScreen extends AbstractContainerScreen<CalculatorMenu> {
                 int btnY = customMathStartY + 15 + (i / 3 * 22);
 
                 this.internalYOffsets.add(btnY);
-                this.buttons.add(Button.builder(Component.literal("[" + op.substring(4) + "]"), b -> sendCalc(op))
+                this.buttons.add(Button.builder(Component.literal(op.substring(4)), b -> sendCalc(op))
                         .bounds(this.left + btnX, this.top + btnY, 62, 20)
                         .tooltip(Tooltip.create(Component.literal(tooltipText)))
                         .build());
