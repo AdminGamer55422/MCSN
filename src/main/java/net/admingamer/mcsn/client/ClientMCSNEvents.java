@@ -29,7 +29,7 @@ public class ClientMCSNEvents {
                             return rgbBE.getColor();
                         }
                     }
-                    return 0xFFFFFF;
+                    return 0xffffff;
                 },
                 MCSNBlocks.CLOTH.get(),
                 MCSNBlocks.DYABLE_PLANKS.get(),
@@ -46,7 +46,7 @@ public class ClientMCSNEvents {
                     if (blockEntityTag != null && blockEntityTag.contains("Color")) {
                         return blockEntityTag.getInt("Color");
                     }
-                    return 0xFFFFFF;
+                    return 0xffffff;
                 },
                 MCSNBlocks.CLOTH.get(),
                 MCSNBlocks.DYABLE_PLANKS.get(),
