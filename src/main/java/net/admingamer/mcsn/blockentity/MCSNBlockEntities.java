@@ -10,11 +10,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class MCSNBlockEntities {
 
-    // 1. Create the Deferred Register for Block Entity Types under your "mcsn" mod ID namespace
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, "mcsn");
 
-    // 2. Cleanly register the RGB Block Entity and map it to all valid dyable story blocks
     public static final RegistryObject<BlockEntityType<RGBBlockEntity>> RGB_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("rgb_block_entity", () ->
                     BlockEntityType.Builder.of(RGBBlockEntity::new,
@@ -26,7 +24,6 @@ public class MCSNBlockEntities {
                     ).build(null) // Replaces .m_58966_((Type)null)
             );
 
-    // 3. Main register hook called from your primary mod class setup
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
