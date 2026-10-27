@@ -33,7 +33,6 @@ public class EntityChatPacket {
     public static void handle(EntityChatPacket pkt, Supplier<NetworkEvent.Context> ctxSupplier) {
         NetworkEvent.Context ctx = ctxSupplier.get();
         ctx.enqueueWork(() -> {
-            // Safely route to client-side logic to add to our Story Mode custom queue
             DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
                 DialogueQueueManager.queueLine(pkt.speaker, pkt.text, pkt.color, pkt.durationSeconds);
             });

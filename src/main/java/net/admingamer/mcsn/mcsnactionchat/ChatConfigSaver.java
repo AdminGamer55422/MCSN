@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.loading.FMLPaths;
 
 import java.io.File;
@@ -18,19 +17,16 @@ public class ChatConfigSaver {
 
     private static void initFile() {
         if (configFile == null) {
-            // Puts the file right inside the standard .minecraft/config/ folder
             configFile = new File(FMLPaths.CONFIGDIR.get().toFile(), "mcsnactionchat.json");
         }
     }
 
-    // Call this inside FriendConfigScreen when hitting "Save Settings"
     public static void saveConfig() {
         initFile();
         JsonObject root = new JsonObject();
         JsonObject friends = new JsonObject();
 
-        // Serialize all your friend profile properties into JSON objects
-        FriendManager.getFriendsDatabase().forEach((username, profile) -> {
+        PlayerManager.getPlayersDatabase().forEach((username, profile) -> {
             JsonObject friendData = new JsonObject();
             friendData.addProperty("nickname", profile.nickname);
             friendData.addProperty("colorRgb", profile.colorRgb);
@@ -46,11 +42,10 @@ public class ChatConfigSaver {
         }
     }
 
-    // Call this when the game starts up to restore all saved profile files
     public static void loadConfig() {
         initFile();
         if (!configFile.exists()) {
-            saveConfig(); // Create a blank template file if it's missing
+            saveConfig();
             return;
         }
 
@@ -64,8 +59,7 @@ public class ChatConfigSaver {
                     String nickname = data.get("nickname").getAsString();
                     int colorRgb = data.get("colorRgb").getAsInt();
 
-                    // Inject directly back into your runtime game profile system map
-                    FriendManager.addOrUpdateFriend(username, nickname, colorRgb);
+                    PlayerManager.addOrUpdatePlayer(username, nickname, colorRgb);
                 });
             }
         } catch (Exception e) {

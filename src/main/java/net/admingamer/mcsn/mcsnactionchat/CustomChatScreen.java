@@ -37,7 +37,7 @@ public class CustomChatScreen extends Screen {
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
         this.renderBackground(graphics); // Clean dark tint behind our chat overlay interface
 
-        List<Component> log = FriendManager.getCustomLog();
+        List<Component> log = PlayerManager.getCustomLog();
         int logX = 15;
         int logY = this.height - 65;
         int maxLines = 12;
@@ -64,8 +64,8 @@ public class CustomChatScreen extends Screen {
                     this.minecraft.player.connection.sendChat(text); // Vanilla command pass-through handler
                 } else {
                     String myName = this.minecraft.player.getName().getString();
-                    TextColor col = FriendManager.getFriendColor(myName);
-                    String disp = FriendManager.getDisplayName(myName);
+                    TextColor col = PlayerManager.getPlayerColor(myName);
+                    String disp = PlayerManager.getDisplayName(myName);
 
                     // 1. Style your bracket name header prefix with your custom color
                     MutableComponent formattedName = Component.literal("<" + disp + "> ")
@@ -77,7 +77,7 @@ public class CustomChatScreen extends Screen {
                             .withStyle(Style.EMPTY.withColor(col));
 
                     // Append the message body text directly onto your colored name header
-                    FriendManager.addCustomMessage(formattedName.append(formattedBody), 120);
+                    PlayerManager.addCustomMessage(formattedName.append(formattedBody), 120);
                 }
             }
             this.onClose();
@@ -88,7 +88,7 @@ public class CustomChatScreen extends Screen {
 
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double delta) {
-        if (delta > 0 && scrollOffset < FriendManager.getCustomLog().size() - 1) scrollOffset++;
+        if (delta > 0 && scrollOffset < PlayerManager.getCustomLog().size() - 1) scrollOffset++;
         else if (delta < 0 && scrollOffset > 0) scrollOffset--;
         return true;
     }

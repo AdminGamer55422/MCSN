@@ -18,14 +18,14 @@ public class CustomHudRenderer {
             Minecraft mc = Minecraft.getInstance();
             GuiGraphics graphics = event.getGuiGraphics();
 
-            List<FriendManager.ActiveMessage> messages = FriendManager.getVisibleMessages();
+            List<PlayerManager.ActiveMessage> messages = PlayerManager.getVisibleMessages();
             int screenW = event.getWindow().getGuiScaledWidth();
             int screenH = event.getWindow().getGuiScaledHeight();
 
             int y = screenH - 65;
 
             for (int i = messages.size() - 1; i >= 0; i--) {
-                FriendManager.ActiveMessage msg = messages.get(i);
+                PlayerManager.ActiveMessage msg = messages.get(i);
                 int textW = mc.font.width(msg.text);
                 int x = (screenW - textW) / 2;
 

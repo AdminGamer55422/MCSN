@@ -7,27 +7,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-public class FriendManager {
+public class PlayerManager {
 
-    public static class FriendProfile {
+    public static class PlayerProfile {
         public String nickname;
         public int colorRgb;
 
-        public FriendProfile(String nickname, int colorRgb) {
+        public PlayerProfile(String nickname, int colorRgb) {
             this.nickname = nickname;
             this.colorRgb = colorRgb;
         }
     }
 
-    // Add this helper method inside your FriendManager class
-    public static Map<String, FriendProfile> getFriendsDatabase() {
-        return FRIENDS_DB;
+    public static Map<String, PlayerProfile> getPlayersDatabase() {
+        return PLAYERS_DB;
     }
 
-    // Maps: Real Username -> Friend Profile Configuration
-    private static final Map<String, FriendProfile> FRIENDS_DB = new HashMap<>();
+    private static final Map<String, PlayerProfile> PLAYERS_DB = new HashMap<>();
 
-    // Core custom chat system log stores
     private static final List<Component> CUSTOM_LOG = new ArrayList<>();
     private static final List<ActiveMessage> VISIBLE_MESSAGES = new ArrayList<>();
     private static final int MAX_HUD_LINES = 4;
@@ -42,17 +39,17 @@ public class FriendManager {
         }
     }
 
-    public static void addOrUpdateFriend(String realUsername, String nickname, int rgbColor) {
-        FRIENDS_DB.put(realUsername, new FriendProfile(nickname, rgbColor));
+    public static void addOrUpdatePlayer(String realUsername, String nickname, int rgbColor) {
+        PLAYERS_DB.put(realUsername, new PlayerProfile(nickname, rgbColor));
     }
 
     public static String getDisplayName(String realUsername) {
-        return FRIENDS_DB.containsKey(realUsername) ? FRIENDS_DB.get(realUsername).nickname : realUsername;
+        return PLAYERS_DB.containsKey(realUsername) ? PLAYERS_DB.get(realUsername).nickname : realUsername;
     }
 
-    public static TextColor getFriendColor(String realUsername) {
-        return FRIENDS_DB.containsKey(realUsername) ?
-                TextColor.fromRgb(FRIENDS_DB.get(realUsername).colorRgb) : TextColor.fromRgb(0xffffff);
+    public static TextColor getPlayerColor(String realUsername) {
+        return PLAYERS_DB.containsKey(realUsername) ?
+                TextColor.fromRgb(PLAYERS_DB.get(realUsername).colorRgb) : TextColor.fromRgb(0xffffff);
     }
 
     public static void addCustomMessage(Component msg, int durationTicks) {
@@ -73,7 +70,6 @@ public class FriendManager {
         });
     }
 
-    // --- Color Converters ---
     public static int hexToRgb(String hex) {
         if (!hex.startsWith("#")) hex = "#" + hex;
         try { return Integer.parseInt(hex.substring(1), 16) & 0xffffff; }

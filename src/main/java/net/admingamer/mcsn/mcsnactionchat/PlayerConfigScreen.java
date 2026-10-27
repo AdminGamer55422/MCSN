@@ -6,7 +6,7 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
-public class FriendConfigScreen extends Screen {
+public class PlayerConfigScreen extends Screen {
     private EditBox realNameBox;
     private EditBox aliasBox;
     private EditBox hexColorBox;
@@ -14,7 +14,7 @@ public class FriendConfigScreen extends Screen {
 
     private boolean isUpdating = false;
 
-    public FriendConfigScreen() {
+    public PlayerConfigScreen() {
         super(Component.literal("Chat Profile Customizer"));
     }
 
@@ -22,7 +22,6 @@ public class FriendConfigScreen extends Screen {
     protected void init() {
         int startX = this.width / 2 - 100;
 
-        // FIXED: Swapped addWidget() for addRenderableWidget() so they can be clicked and focused!
         this.realNameBox = this.addRenderableWidget(new EditBox(this.font, startX, 40, 200, 16, Component.literal("Real Name")));
         this.realNameBox.setHint(Component.literal("Username"));
 
@@ -41,11 +40,10 @@ public class FriendConfigScreen extends Screen {
         this.gBox.setValue("255");
         this.bBox.setValue("204");
 
-        // --- RESPONDERS TO AUTO-UPDATE & SYNC COLOR LIVE AS YOU TYPE ---
         this.hexColorBox.setResponder(text -> {
             if (isUpdating) return;
             isUpdating = true;
-            int color = FriendManager.hexToRgb(text.trim());
+            int color = PlayerManager.hexToRgb(text.trim());
             this.rBox.setValue(String.valueOf((color >> 16) & 0xff));
             this.gBox.setValue(String.valueOf((color >> 8) & 0xff));
             this.bBox.setValue(String.valueOf(color & 0xff));
@@ -69,17 +67,15 @@ public class FriendConfigScreen extends Screen {
         this.gBox.setResponder(rgbResponder);
         this.bBox.setResponder(rgbResponder);
 
-        // Reset Button
         this.addRenderableWidget(Button.builder(Component.literal("Reset Color"), (btn) -> {
             this.hexColorBox.setValue("#ffffff");
         }).bounds(startX, 172, 95, 16).build());
 
-        // Save Button
         this.addRenderableWidget(Button.builder(Component.literal("Save Settings"), (btn) -> {
             String real = this.realNameBox.getValue().trim();
             String alias = this.aliasBox.getValue().trim();
             if (!real.isEmpty() && !alias.isEmpty()) {
-                FriendManager.addOrUpdateFriend(real, alias, parseChosenColor());
+                PlayerManager.addOrUpdatePlayer(real, alias, parseChosenColor());
                 ChatConfigSaver.saveConfig();
                 this.onClose();
             }
@@ -89,7 +85,7 @@ public class FriendConfigScreen extends Screen {
     private int parseChosenColor() {
         try {
             String hex = hexColorBox.getValue().trim();
-            return FriendManager.hexToRgb(hex);
+            return PlayerManager.hexToRgb(hex);
         } catch (Exception e) {
             return 0xffffff;
         }
@@ -99,13 +95,10 @@ public class FriendConfigScreen extends Screen {
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
         this.renderBackground(graphics);
 
-        // REMOVED redundancy: .render() calls on fields are handled automatically by addRenderableWidget!
-
         int previewColor = parseChosenColor();
         int sqX1 = this.width / 2 - 100;
         int sqY1 = 110;
 
-        // Render live square block updates
         graphics.fill(sqX1 - 1, sqY1 - 1, sqX1 + 17, sqY1 + 17, 0xff444444);
         graphics.fill(sqX1, sqY1, sqX1 + 16, sqY1 + 16, 0xff000000 | previewColor);
 

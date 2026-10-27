@@ -4,8 +4,8 @@ import com.mojang.blaze3d.platform.InputConstants;
 import net.admingamer.mcsn.item.LaserGunItem;
 import net.admingamer.mcsn.mcsnactionchat.CustomChatScreen;
 import net.admingamer.mcsn.mcsnactionchat.DialogueQueueManager;
-import net.admingamer.mcsn.mcsnactionchat.FriendConfigScreen;
-import net.admingamer.mcsn.mcsnactionchat.FriendManager;
+import net.admingamer.mcsn.mcsnactionchat.PlayerConfigScreen;
+import net.admingamer.mcsn.mcsnactionchat.PlayerManager;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.ItemStack;
@@ -46,7 +46,7 @@ public class MCSNKeyBindings {
     public static void onClientTick(TickEvent.ClientTickEvent event) {
         if (event.phase == TickEvent.Phase.END) {
             // 1. Tick down background text fading and dialogue progression systems
-            FriendManager.tickHudMessages();
+            PlayerManager.tickHudMessages();
             DialogueQueueManager.clientTick();
 
             Minecraft mc = Minecraft.getInstance();
@@ -67,7 +67,7 @@ public class MCSNKeyBindings {
                 }
 
                 while (OPEN_FRIEND_CONFIG.consumeClick()) {
-                    mc.setScreen(new FriendConfigScreen());
+                    mc.setScreen(new PlayerConfigScreen());
                 }
             }
         }

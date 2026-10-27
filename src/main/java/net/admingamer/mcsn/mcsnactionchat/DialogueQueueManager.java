@@ -47,7 +47,7 @@ public class DialogueQueueManager {
             MutableComponent body = Component.literal(line.text)
                     .withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xffffff)));
 
-            FriendManager.addCustomMessage(header.append(body), line.durationTicks);
+            PlayerManager.addCustomMessage(header.append(body), line.durationTicks);
             activeLineTicksLeft = line.durationTicks;
 
             // Dialogue notification blip cue sound execution
