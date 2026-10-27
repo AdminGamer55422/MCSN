@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class RGBBlockEntity extends BlockEntity {
-    private int color = 16777215; // Default to white (0xFFFFFF)
+    private int color = 0xffffff;
 
     public RGBBlockEntity(BlockPos pos, BlockState state) {
         super((BlockEntityType<?>) MCSNBlockEntities.RGB_BLOCK_ENTITY.get(), pos, state);
@@ -25,46 +25,46 @@ public class RGBBlockEntity extends BlockEntity {
 
     public void setColor(int color) {
         this.color = color;
-        this.setChanged(); // Replaces m_6596_()
+        this.setChanged();
 
-        if (this.level != null) { // Replaces f_58857_
-            // Replaces m_7260_ and m_58900_ (Updates block state on the client/world)
+        if (this.level != null) {
+
             this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(), 3);
         }
     }
 
     @Override
-    public void load(@NotNull CompoundTag tag) { // Replaces m_142466_
+    public void load(@NotNull CompoundTag tag) {
         super.load(tag);
-        if (tag.contains("Color")) { // Replaces m_128441_
-            this.color = tag.getInt("Color"); // Replaces m_128451_
+        if (tag.contains("Color")) {
+            this.color = tag.getInt("Color");
         }
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) { // Replaces m_183515_
+    protected void saveAdditional(@NotNull CompoundTag tag) {
         super.saveAdditional(tag);
-        tag.putInt("Color", this.color); // Replaces m_128405_
+        tag.putInt("Color", this.color);
     }
 
     @Override
-    public @NotNull CompoundTag getUpdateTag() { // Replaces m_5995_
+    public @NotNull CompoundTag getUpdateTag() {
         CompoundTag tag = super.getUpdateTag();
         tag.putInt("Color", this.color);
         return tag;
     }
 
     @Override
-    public @Nullable Packet<ClientGamePacketListener> getUpdatePacket() { // Replaces m_58483_
-        return ClientboundBlockEntityDataPacket.create(this); // Replaces m_195640_
+    public @Nullable Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 
     @Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
-        CompoundTag tag = pkt.getTag(); // Replaces m_131708_
+        CompoundTag tag = pkt.getTag();
         if (tag != null && tag.contains("Color")) {
             this.color = tag.getInt("Color");
-            if (this.level != null && this.level.isClientSide) { // Replaces f_46443_
+            if (this.level != null && this.level.isClientSide) {
                 this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(), 3);
             }
         }
