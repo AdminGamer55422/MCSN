@@ -1,4 +1,4 @@
-package net.admingamer.mcsn.client; // Match your mod's client package
+package net.admingamer.mcsn.client;
 
 import net.admingamer.mcsn.MCSN;
 import net.admingamer.mcsn.network.MCSNMessages;
@@ -77,6 +77,6 @@ public class LaserColorScreen extends Screen {
 
     @Override
     public boolean isPauseScreen() {
-        return false; // Prevents the multiplayer game from interrupting
+        return false;
     }
 }
