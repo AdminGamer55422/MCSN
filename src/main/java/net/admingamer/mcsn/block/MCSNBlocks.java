@@ -133,6 +133,30 @@ public class MCSNBlocks {
                     .sound(SoundType.GLASS)
                     .lightLevel((state) -> 15)));
 
+    public static final RegistryObject<Block> TAN_GLOWSTONE = registerBlock("tan_glowstone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.PLING)
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> GRAY_GLOWSTONE = registerBlock("gray_glowstone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .instrument(NoteBlockInstrument.PLING)
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> GREEN_GLOWSTONE = registerBlock("green_glowstone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .instrument(NoteBlockInstrument.PLING)
+                    .strength(0.3f)
+                    .sound(SoundType.GLASS)
+                    .lightLevel((state) -> 15)));
+
     public static final RegistryObject<Block> TOWN_FAIR_DOOR_A = registerBlock("town_fair_door_a",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
 

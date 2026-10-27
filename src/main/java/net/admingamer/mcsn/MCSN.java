@@ -35,12 +35,10 @@ public class MCSN {
         MCSNItems.register(mcsnEventBus);
         MCSNBlocks.register(mcsnEventBus);
 
-        // Keep this instance...
         MCSNBlockEntities.register(mcsnEventBus);
 
         mcsnEventBus.addListener(this::commonSetup);
 
-        // NEW: Register the client setup method so it actually loads your chat configuration profiles!
         mcsnEventBus.addListener(this::clientSetup);
 
         MCSNMenus.register(mcsnEventBus);
@@ -51,10 +49,7 @@ public class MCSN {
         mcsnEventBus.addListener(net.admingamer.mcsn.client.ClientMCSNEvents::registerBlockColors);
         mcsnEventBus.addListener(net.admingamer.mcsn.client.ClientMCSNEvents::registerItemColors);
 
-        // REMOVED DUPLICATE: net.admingamer.mcsn.blockentity.MCSNBlockEntities.register(mcsnEventBus);
-        // This line was causing the registry crash.
 
-        // 2. FORCE MINECRAFT TO LISTEN TO YOUR KEYBINDS AND RENDERING EVENTS
         MinecraftForge.EVENT_BUS.register(MCSNKeyBindings.class);
         MinecraftForge.EVENT_BUS.register(CustomHudRenderer.class);
     }
@@ -69,7 +64,6 @@ public class MCSN {
     public void onServerStarting(ServerStartingEvent event) {}
 
     private void clientSetup(final FMLClientSetupEvent event) {
-        // Now runs securely during the mod lifecycle loading phase
         ChatConfigSaver.loadConfig();
     }
 
