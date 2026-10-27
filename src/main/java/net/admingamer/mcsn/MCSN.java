@@ -49,7 +49,6 @@ public class MCSN {
         mcsnEventBus.addListener(net.admingamer.mcsn.client.ClientMCSNEvents::registerBlockColors);
         mcsnEventBus.addListener(net.admingamer.mcsn.client.ClientMCSNEvents::registerItemColors);
 
-
         MinecraftForge.EVENT_BUS.register(MCSNKeyBindings.class);
         MinecraftForge.EVENT_BUS.register(CustomHudRenderer.class);
     }
