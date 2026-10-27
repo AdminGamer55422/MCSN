@@ -60,12 +60,15 @@ public class MCSNBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MCSNBlocks.DYABLE_PLANKS.get());
         this.dropSelf(MCSNBlocks.GLOWING_OBSIDIAN.get());
         this.dropSelf(MCSNBlocks.GRAY_GRANITE.get());
+        this.dropSelf(MCSNBlocks.GRAY_GLOWSTONE.get());
+        this.dropSelf(MCSNBlocks.GREEN_GLOWSTONE.get());
         this.dropSelf(MCSNBlocks.MIRROR_BLOCK.get());
         this.dropSelf(MCSNBlocks.ORANGE_GLOWSTONE.get());
         this.dropSelf(MCSNBlocks.PURPLE_WITHERSTORM_FLESH_BLOCK.get());
         this.dropSelf(MCSNBlocks.RED_GLOWSTONE.get());
         this.dropSelf(MCSNBlocks.REDSTONE_HEART.get());
         this.dropSelf(MCSNBlocks.SKYLAND_COBBLESTONE.get());
+        this.dropSelf(MCSNBlocks.TAN_GLOWSTONE.get());
         this.dropSelf(MCSNBlocks.TOWN_FAIR_BRICKS_B.get());
         this.dropSelf(MCSNBlocks.TOWN_FAIR_BRICKS_C.get());
         this.dropSelf(MCSNBlocks.TOWN_FAIR_BRICKS_D.get());

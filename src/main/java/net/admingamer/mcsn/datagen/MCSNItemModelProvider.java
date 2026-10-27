@@ -1,6 +1,7 @@
 package net.admingamer.mcsn.datagen;
 
 import net.admingamer.mcsn.MCSN;
+import net.admingamer.mcsn.block.MCSNBlocks;
 import net.admingamer.mcsn.item.MCSNItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

@@ -23,21 +23,18 @@ public class MCSNMessages {
 
         INSTANCE = net;
 
-        // Existing Calculator Packet Registration
         net.messageBuilder(CalculatorPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
                 .decoder(CalculatorPacket::fromBytes)
                 .encoder(CalculatorPacket::toBytes)
                 .consumerMainThread(CalculatorPacket::handle)
                 .add();
 
-        // Existing SaveRGB Packet Registration
         net.messageBuilder(SaveRGBPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
                 .encoder(SaveRGBPacket::encode)
                 .decoder(SaveRGBPacket::decode)
                 .consumerMainThread(SaveRGBPacket::handle)
                 .add();
 
-        // --- NEW: LASER GUN COLOR SYNC PACKET REGISTRATION ---
         net.messageBuilder(UpdateLaserColorPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
                 .encoder(UpdateLaserColorPacket::toBytes)
                 .decoder(UpdateLaserColorPacket::new)

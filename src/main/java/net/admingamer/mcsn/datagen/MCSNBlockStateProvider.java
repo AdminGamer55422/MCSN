@@ -59,7 +59,6 @@ public class MCSNBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(((DoorBlock) MCSNBlocks.TOWN_FAIR_DOOR_H.get()), modLoc("block/town_fair_door_h/town_fair_door_h_bottom"), modLoc("block/town_fair_door_h/town_fair_door_h_top"), "cutout");
         doorBlockWithRenderType(((DoorBlock) MCSNBlocks.TOWN_FAIR_DOOR_I.get()), modLoc("block/town_fair_door_i/town_fair_door_i_bottom"), modLoc("block/town_fair_door_i/town_fair_door_i_top"), "cutout");
         doorBlockWithRenderType(((DoorBlock) MCSNBlocks.TOWN_FAIR_DOOR_J.get()), modLoc("block/town_fair_door_j/town_fair_door_j_bottom"), modLoc("block/town_fair_door_j/town_fair_door_j_top"), "cutout");
-
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
