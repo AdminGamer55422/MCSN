@@ -21,7 +21,7 @@ public class MCSNBlockEntities {
                             MCSNBlocks.DYABLE_GLASS.get(),
                             MCSNBlocks.DYABLE_CONCRETE.get(),
                             MCSNBlocks.DYABLE_GLOWSTONE.get()
-                    ).build(null) // Replaces .m_58966_((Type)null)
+                    ).build(null)
             );
 
     public static void register(IEventBus eventBus) {
