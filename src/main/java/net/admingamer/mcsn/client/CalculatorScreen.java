@@ -18,7 +18,7 @@ public class CalculatorScreen extends AbstractContainerScreen<CalculatorMenu> {
     private EditBox inputN3;
     private MathScrollPanel mathPanel;
 
-    private final String[] javaMathOps = {"|a|", "ceil", "sign", "floor", "exp", "expm1", "log", "log10", "log1p", "log_b", "mod", "asin", "acos", "atan", "atan2", "random", "round", "max", "min", "^", "!", "scalb", "√", "∛", "²", "deg", "rad", "ulp"};
+    private final String[] javaMathOps = {"abs", "ceil", "sign", "floor", "exp", "expm1", "log", "log10", "log1p", "log_b", "mod", "asin", "acos", "atan", "atan2", "random", "round", "max", "min", "^", "!", "scalb", "√", "∛", "²", "deg", "rad", "ulp"};
     private final String[] customMathOps = {"mth_sin", "mth_tan", "mth_cos", "mth_sinh", "mth_tanh", "mth_cosh", "mth_color", "mth_hsvToRgb", "mth_clamp", "mth_clampedLerp", "mth_wrap", "mth_lerp", "mth_inverseLerp", "mth_triangleWave", "mth_wobble", "mth_acosh", "mth_asinh", "mth_atanh", "mth_csc", "mth_csch", "mth_acsc", "mth_acsch", "mth_sec", "mth_sech", "mth_asec", "mth_asech", "mth_cot", "mth_coth", "mth_acot", "mth_acoth"};
 
     public CalculatorScreen(CalculatorMenu menu, Inventory playerInventory, Component title) {

@@ -73,7 +73,7 @@ public class CalculatorPacket {
                         }
                         ans = result;
                     }
-                    case "|a|" -> ans = BigDecimal.valueOf(Math.abs(n1));
+                    case "abs" -> ans = BigDecimal.valueOf(Math.abs(n1));
                     case "ceil" -> ans = BigDecimal.valueOf(Math.ceil(n1));
                     case "acos" -> ans = BigDecimal.valueOf(Math.acos(n1));
                     case "asin" -> ans = BigDecimal.valueOf(Math.asin(n1));
@@ -191,7 +191,7 @@ public class CalculatorPacket {
                 String sAns = ans.stripTrailingZeros().toPlainString();
 
                 String display = switch (op) {
-                    case "|a|" -> "|" + s1 + "| = " + sAns;
+                    case "abs" -> "|" + s1 + "| = " + sAns;
                     case "²" -> s1 + "² = " + sAns;
                     case "!" -> s1 + "! = " + sAns;
                     case "deg" -> s1 + "to degrees = " + sAns;
