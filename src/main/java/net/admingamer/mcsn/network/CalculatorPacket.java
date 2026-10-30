@@ -132,6 +132,7 @@ public class CalculatorPacket {
                     case "deg" -> ans = BigDecimal.valueOf(Math.toDegrees(n1));
                     case "rad" -> ans = BigDecimal.valueOf(Math.toRadians(n1));
                     case "ulp" -> ans = BigDecimal.valueOf(Math.ulp(n1));
+                    case "seed" -> ans = BigDecimal.valueOf(Mth.getSeed((int) n1, (int) n2, (int) n3));
 
                     case "m_add" -> {
                         net.minecraft.nbt.CompoundTag persistentData = player.getPersistentData();
@@ -255,6 +256,7 @@ public class CalculatorPacket {
                     case "mth_inverseLerp" -> "inverseLerp(" + s1 + ", min=" + s2 + ", max=" + s3 + ") = " + sAns;
                     case "mth_color" -> "color(r=" + s1 + ", b=" + s2 + ", g=" + s3 + ") = " + sAns;
                     case "mth_hsvToRgb" -> "HSV(h=" + s1 + ", s=" + s2 + ", v=" + s3 + ") to RGB = " + sAns;
+                    case "seed" -> "seed(x=" + s1 + ", y=" + s2 + ", z=" + s3 + ") = " + sAns;
 
                     case "×" -> s1 + " · " + s2 + " = " + sAns;
                     case "÷" -> s1 + "/" + s2 + " = " + sAns;
