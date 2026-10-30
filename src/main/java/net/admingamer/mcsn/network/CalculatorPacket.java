@@ -259,7 +259,7 @@ public class CalculatorPacket {
                     case "×" -> s1 + " · " + s2 + " = " + sAns;
                     case "÷" -> s1 + "/" + s2 + " = " + sAns;
                     case "%" -> s1 + "% of " + s2 + " = " + sAns;
-                    case "pow", "^" -> s1 + "^" + s2 + " = " + sAns;
+                    case "pow"-> s1 + "^" + s2 + " = " + sAns;
                     case "mod" -> "mod(" + s1 + ", " + s2 + ") = " + sAns;
                     case "scalb" -> s1 + " · 2^" + s2 + " = " + sAns;
                     case "mth_triangleWave" -> "triangleWave(" + s1 + ", " + s2 + ") = " + sAns;
