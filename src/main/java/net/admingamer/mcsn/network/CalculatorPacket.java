@@ -62,7 +62,7 @@ public class CalculatorPacket {
 
                     case "max" -> ans = number1.max(number2);
                     case "min" -> ans = number1.min(number2);
-                    case "^" -> ans = BigDecimal.valueOf(Math.pow(n1, n2));
+                    case "pow" -> ans = BigDecimal.valueOf(Math.pow(n1, n2));
                     case "!" -> {
                         int target = (int) Math.floor(n1);
                         if (target < 0) throw new IllegalArgumentException("Cannot calculate factorial of a negative number!");
@@ -84,7 +84,20 @@ public class CalculatorPacket {
                     case "exp" -> ans = BigDecimal.valueOf(Math.exp(n1));
                     case "expm1" -> ans = BigDecimal.valueOf(Math.expm1(n1));
                     case "floor" -> ans = BigDecimal.valueOf(Math.floor(n1));
-                    case "log" -> ans = BigDecimal.valueOf(Math.log(n1));
+                    case "nCr" -> {
+                        int n = (int) Math.floor(n1);
+                        int r = (int) Math.floor(n2);
+                        if (n < 0 || r < 0 || r > n) throw new IllegalArgumentException("Invalid n or r for combination!");
+                        ans = calculateCombination(n, r); // Requires a small helper method
+                    }
+                    case "nPr" -> {
+                        int n = (int) Math.floor(n1);
+                        int r = (int) Math.floor(n2);
+                        if (n < 0 || r < 0 || r > n) throw new IllegalArgumentException("Invalid n or r for permutation!");
+                        ans = calculatePermutation(n, r); // Requires a small helper method
+                    }
+                    case "log2" -> ans = BigDecimal.valueOf(Math.log(n1) / Math.log(2));
+                    case "ln" -> ans = BigDecimal.valueOf(Math.log(n1)); // Clean alias for "log"
                     case "log_b" -> {
                         if (n1 <= 0 || n2 <= 0 || n2 == 1) {
                             throw new IllegalArgumentException("Invalid logarithms bases/values.");
@@ -103,6 +116,19 @@ public class CalculatorPacket {
                     case "scalb" -> ans = BigDecimal.valueOf(Math.scalb(n1, (int)n2));
                     case "√" -> ans = BigDecimal.valueOf(Math.sqrt(n1));
                     case "²" -> ans = BigDecimal.valueOf(Mth.square(n1));
+                    case "hypot" -> ans = BigDecimal.valueOf(Math.hypot(n1, n2));
+                    case "signum" -> ans = BigDecimal.valueOf(Math.signum(n1));
+                    case "nextUp" -> ans = BigDecimal.valueOf(Math.nextUp(n1));
+                    case "nextDown" -> ans = BigDecimal.valueOf(Math.nextDown(n1));
+                    case "1/√" -> ans = BigDecimal.valueOf(Mth.fastInvSqrt((float)n1));
+                    case "erf" -> ans = BigDecimal.valueOf(MCSNMath.erf(n1));
+                    case "erfc" -> ans = BigDecimal.valueOf(MCSNMath.erfc(n1));
+                    case "gamma" -> ans = BigDecimal.valueOf(MCSNMath.gamma(n1));
+                    case "beta" -> ans = BigDecimal.valueOf(MCSNMath.beta(n1, n2));
+                    case "npr" -> ans = MCSNMath.permutation((int)Math.floor(n1), (int)Math.floor(n2));
+                    case "ncr" -> ans = MCSNMath.combination((int)Math.floor(n1), (int)Math.floor(n2));
+                    case "gcd" -> ans = MCSNMath.gcd(number1, number2);
+                    case "lcm" -> ans = MCSNMath.lcm(number1, number2);
                     case "deg" -> ans = BigDecimal.valueOf(Math.toDegrees(n1));
                     case "rad" -> ans = BigDecimal.valueOf(Math.toRadians(n1));
                     case "ulp" -> ans = BigDecimal.valueOf(Math.ulp(n1));
@@ -145,6 +171,28 @@ public class CalculatorPacket {
                         context.setPacketHandled(true);
                         return;
                     }
+                    case "m_sub" -> {
+                        net.minecraft.nbt.CompoundTag persistentData = player.getPersistentData();
+                        String currentMemStr = persistentData.getString("mcsn_calculator_memory");
+                        BigDecimal currentMem = currentMemStr.isEmpty() ? BigDecimal.ZERO : new BigDecimal(currentMemStr);
+
+                        BigDecimal valueToSub = ans.equals(BigDecimal.ZERO) ? number1 : ans;
+                        ans = currentMem.subtract(valueToSub);
+
+                        persistentData.putString("mcsn_calculator_memory", ans.toPlainString());
+                        player.sendSystemMessage(Component.literal("§bMemory M-: Subtracted " + valueToSub.stripTrailingZeros().toPlainString() + " (Total: " + ans.stripTrailingZeros().toPlainString() + ")"));
+                        context.setPacketHandled(true);
+                        return;
+                    }
+                    case "m_store" -> {
+                        net.minecraft.nbt.CompoundTag persistentData = player.getPersistentData();
+                        BigDecimal valueToStore = ans.equals(BigDecimal.ZERO) ? number1 : ans;
+
+                        persistentData.putString("mcsn_calculator_memory", valueToStore.toPlainString());
+                        player.sendSystemMessage(Component.literal("§bMemory MS: Stored " + valueToStore.stripTrailingZeros().toPlainString()));
+                        context.setPacketHandled(true);
+                        return;
+                    }
 
                     case "mth_sin" -> ans = BigDecimal.valueOf(Math.sin(n1));
                     case "mth_sinh" -> ans = BigDecimal.valueOf(Math.sinh(n1));
@@ -162,6 +210,8 @@ public class CalculatorPacket {
                     case "mth_inverseLerp" -> ans = BigDecimal.valueOf(Mth.inverseLerp(f1, f2, f3));
                     case "mth_triangleWave" -> ans = BigDecimal.valueOf(Mth.triangleWave(f1, f2));
                     case "mth_wobble" -> ans = BigDecimal.valueOf(Mth.wobble(n1));
+                    case "mth_frac" -> ans = BigDecimal.valueOf(Mth.frac(n1));
+                    case "mth_rotLerp" -> ans = BigDecimal.valueOf(Mth.rotLerp((float)n1, (float)n2, (float)n3));
 
                     case "mth_acosh" -> ans = BigDecimal.valueOf(MCSNMath.acosh(n1));
                     case "mth_asinh" -> ans = BigDecimal.valueOf(MCSNMath.asinh(n1));
@@ -194,10 +244,10 @@ public class CalculatorPacket {
                     case "abs" -> "|" + s1 + "| = " + sAns;
                     case "²" -> s1 + "² = " + sAns;
                     case "!" -> s1 + "! = " + sAns;
-                    case "deg" -> s1 + "to degrees = " + sAns;
-                    case "rad" -> s1 + "to radians = " + sAns;
+                    case "deg" -> s1 + " to degrees = " + sAns;
+                    case "rad" -> s1 + " to radians = " + sAns;
 
-                    case "log_b" -> "log_" + s2 + "(" + s1 + ") = " + sAns + Math.scalb(3, 3);
+                    case "log_b" -> "log_" + s2 + "(" + s1 + ") = " + sAns;
                     case "mth_clamp" -> "clamp(" + s1 + ", min=" + s2 + ", max=" + s3 + ") = " + sAns;
                     case "mth_clampedLerp" -> "clampedLerp(" + s1 + ", min=" + s2 + ", max=" + s3 + ") = " + sAns;
                     case "mth_wrap" -> "wrapDegrees(" + s1 + ") = " + sAns + "°";
@@ -209,9 +259,16 @@ public class CalculatorPacket {
                     case "×" -> s1 + " · " + s2 + " = " + sAns;
                     case "÷" -> s1 + "/" + s2 + " = " + sAns;
                     case "%" -> s1 + "% of " + s2 + " = " + sAns;
+                    case "pow", "^" -> s1 + "^" + s2 + " = " + sAns;
                     case "mod" -> "mod(" + s1 + ", " + s2 + ") = " + sAns;
                     case "scalb" -> s1 + " · 2^" + s2 + " = " + sAns;
                     case "mth_triangleWave" -> "triangleWave(" + s1 + ", " + s2 + ") = " + sAns;
+
+                    case "beta" -> "Β(" + s1 + ", " + s2 + ") = " + sAns;
+                    case "gamma" -> "Γ(" + s1 + ") = " + sAns;
+                    case "mth_frac" -> "frac(" + s1 + ") = " + sAns;
+                    case "1/√" -> "1/√(" + s1 + ") = " + sAns;
+
                     default -> {
                         if (isBinaryOp) {
                             yield s1 + " " + op + " " + s2 + " = " + sAns;
@@ -229,5 +286,33 @@ public class CalculatorPacket {
             }
         });
         context.setPacketHandled(true);
+    }
+
+    private BigDecimal calculatePermutation(int n, int r) {
+        if (r == 0) return BigDecimal.ONE;
+
+        BigDecimal result = BigDecimal.ONE;
+        for (int i = 0; i < r; i++) {
+            result = result.multiply(BigDecimal.valueOf(n - i));
+        }
+        return result;
+    }
+
+    private BigDecimal calculateCombination(int n, int r) {
+        if (r == 0 || n == r) return BigDecimal.ONE;
+
+        if (r > n - r) {
+            r = n - r;
+        }
+
+        BigDecimal numerator = BigDecimal.ONE;
+        BigDecimal denominator = BigDecimal.ONE;
+
+        for (int i = 1; i <= r; i++) {
+            numerator = numerator.multiply(BigDecimal.valueOf(n - i + 1));
+            denominator = denominator.multiply(BigDecimal.valueOf(i));
+        }
+
+        return numerator.divide(denominator, 14, java.math.RoundingMode.HALF_UP);
     }
 }

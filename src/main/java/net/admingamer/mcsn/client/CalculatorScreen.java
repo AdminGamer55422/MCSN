@@ -18,8 +18,8 @@ public class CalculatorScreen extends AbstractContainerScreen<CalculatorMenu> {
     private EditBox inputN3;
     private MathScrollPanel mathPanel;
 
-    private final String[] javaMathOps = {"abs", "ceil", "sign", "floor", "exp", "expm1", "log", "log10", "log1p", "log_b", "mod", "asin", "acos", "atan", "atan2", "random", "round", "max", "min", "^", "!", "scalb", "√", "∛", "²", "deg", "rad", "ulp"};
-    private final String[] customMathOps = {"mth_sin", "mth_tan", "mth_cos", "mth_sinh", "mth_tanh", "mth_cosh", "mth_color", "mth_hsvToRgb", "mth_clamp", "mth_clampedLerp", "mth_wrap", "mth_lerp", "mth_inverseLerp", "mth_triangleWave", "mth_wobble", "mth_acosh", "mth_asinh", "mth_atanh", "mth_csc", "mth_csch", "mth_acsc", "mth_acsch", "mth_sec", "mth_sech", "mth_asec", "mth_asech", "mth_cot", "mth_coth", "mth_acot", "mth_acoth"};
+    private final String[] javaMathOps = {"abs", "ceil", "sign", "floor", "exp", "expm1", "hypot", "ln", "log10", "log1p", "log_b", "mod", "asin", "acos", "atan", "atan2", "random", "round", "max", "min", "²", "pow", "signum", "!", "nPr", "nCr", "gcd", "lcm", "beta", "gamma", "erf", "erfc", "log2", "scalb", "√", "∛", "1/√", "nextUp", "nextDown", "deg", "rad", "ulp"};
+    private final String[] customMathOps = {"mth_sin", "mth_tan", "mth_cos", "mth_sinh", "mth_tanh", "mth_cosh", "mth_color", "mth_hsvToRgb", "mth_clamp", "mth_clampedLerp", "mth_wrap", "mth_lerp", "mth_inverseLerp", "mth_rotLerp", "mth_triangleWave", "mth_wobble", "mth_frac", "mth_acosh", "mth_asinh", "mth_atanh", "mth_csc", "mth_csch", "mth_acsc", "mth_acsch", "mth_sec", "mth_sech", "mth_asec", "mth_asech", "mth_cot", "mth_coth", "mth_acot", "mth_acoth"};
 
     public CalculatorScreen(CalculatorMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -77,6 +77,16 @@ public class CalculatorScreen extends AbstractContainerScreen<CalculatorMenu> {
         this.addRenderableWidget(Button.builder(Component.literal("M+"), b -> sendCalc("m_add"))
                 .bounds(baseX + 105, baseY + 77, 42, 16)
                 .tooltip(Tooltip.create(Component.literal("Memory Plus\n\nAdds current value to memory tracking slot")))
+                .build());
+
+        this.addRenderableWidget(Button.builder(Component.literal("M-"), b -> sendCalc("m_sub"))
+                .bounds(baseX + 150, baseY + 77, 42, 16)
+                .tooltip(Tooltip.create(Component.literal("Memory Minus\n\nSubtracted current value from memory tracking slot")))
+                .build());
+
+        this.addRenderableWidget(Button.builder(Component.literal("MS"), b -> sendCalc("m_store"))
+                .bounds(baseX + 195, baseY + 77, 42, 16)
+                .tooltip(Tooltip.create(Component.literal("Memory Store\n\nOverwrites and sets the memory slot to the current value")))
                 .build());
 
         this.mathPanel = new MathScrollPanel(this.minecraft, 210, 114, baseY + 96, baseX + 15);
